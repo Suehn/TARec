@@ -1,0 +1,125 @@
+2024-10-14 18:28: PID: 361604
+
+2024-10-14 18:28: args: 
+name                              : MMTA_KD
+dataset                           : amazon
+data_path                         : /home/ZIYIAP/Documents/OneDrive_local/distiller/TARec/data
+Ks                                : [10, 20, 40, 50]
+seed                              : 14322
+sparse                            : 1
+test_flag                         : part
+edge_mask                         : 0
+edge_mask_rate                    : 0.1
+batch_size                        : 4096
+epoch                             : 1000
+cf_model                          : light_init
+early_stopping_patience           : 12
+gpu_id                            : 0
+regs                              : [1e-5,1e-5,1e-2]
+emb_reg                           : 1e-07
+teacher_model_type                : gcl
+lr                                : 0.001
+teacher_model_dict_name           : teacher_model_great
+teacher_reg_rate                  : 1
+t_weight_decay                    : 0.001
+t_feat_mf_rate                    : 0.001
+feat_reg_decay                    : 1e-05
+is_softmax                        : False
+is_gcl_softmax                    : False
+teacher_assistant_model_type      : lightgcl
+teacher_assistant_model_dict_name : teacher_assistant_model_great
+student_model_type                : mlpgcl
+student_model_dict_name           : 
+student_embed_size                : 64
+student_lr                        : 0.0004
+student_reg_rate                  : 1
+student_drop_rate                 : 0.2
+student_tau                       : 5
+embed_size                        : 64
+drop_rate                         : 0.4
+weight_size                       : [64, 64]
+model_cat_rate                    : 0.028
+layers                            : 1
+n_layers                          : 2
+ta_n_layers                       : 1
+student_n_layers                  : 1
+mlp_n_layers                      : 1
+if_train_teacher                  : False
+is_train_student                  : True
+kd_loss_rate                      : 1e-05
+kd_loss_feat_rate                 : 0.1
+cl_loss_rate                      : 0.001
+svd_gcl_rate                      : 1.0
+x_gcl_rate                        : 1.0
+layer_gcl                         : 1.0
+svd_layer_gcl                     : 0.0
+xsvd_gcl                          : 0.0
+x_layer_gcl                       : 0.0
+ssm_rate                          : 0.6
+s_layer_gcl                       : 0.0025
+t_cl_loss_rate                    : 0.002
+hard_token_type                   : pca
+soft_token_rate                   : 0.1
+feat_soft_token_rate              : 9
+t_prompt_rate1                    : 10
+prompt_dropout                    : 0
+alpha_l                           : 2
+feat_loss_type                    : sce
+neg_sample_num                    : 10
+list_wise_loss_rate               : 1
+q                                 : 1
+eps                               : 0.2
+kd_t_decay_threshold              : 0.0
+kd_ta_decay_rate                  : 0.6
+kd_t_decay_rate                   : 0.4
+t_init_method                     : uniform
+norm_mode                         : None
+ta_norm_mode                      : None
+s_norm_mode                       : None
+s_norm_scale                      : 0.05
+ta_norm_scale                     : 0.0
+norm_scale                        : 0.08
+kd_loss_type                      : sinkhorn
+is_teacher_kd                     : False
+init_teacher                      : False
+t_bpr_loss_rate                   : 1.0
+2024-10-14 18:28: 🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶
+2024-10-14 18:28: 🧑📘 Start training teacher_assistant model... 🚀✨
+2024-10-14 18:28: 🎓Teacher:gcl || 🧑📘TA: lightgcl
+2024-10-14 18:28: 🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶
+
+2024-10-14 18:28: 🎓load teacher model teacher_model_great.pt
+2024-10-14 18:28: 🎓Teacher (Seed 10760): Recall@20: 0.04118
+2024-10-14 18:28: 🎓Teacher (Seed 2493): Recall@20: 0.04114
+2024-10-14 18:28: 🎓Teacher (Seed 8764): Recall@20: 0.04138
+2024-10-14 18:28: 🎓Teacher (Seed 5382): Recall@20: 0.04174
+2024-10-14 18:29: 🎓Teacher (Seed 40816): Recall@20: 0.04212
+2024-10-14 18:29: 🎓Teacher (Seed 9204): Recall@20: 0.04224
+2024-10-14 18:29: 🎓Teacher (Seed 22489): Recall@20: 0.04279
+2024-10-14 18:29: 🎓Teacher (Seed 9898): Recall@20: 0.04231
+2024-10-14 18:29: 🎓Teacher (Seed 60847): Recall@20: 0.04241
+2024-10-14 18:30: 🎓Teacher (Seed 31030): Recall@20: 0.04123
+2024-10-14 18:30: 🧑📘Epoch 1/1000 Early stopping 0 - Recall 0.03715, Ndcg: 0.0155 || Avg Loss: 390.8019 | BPR: 0.3702, Pure Ranking KD: 32813.8768, KD Feat: 1.3715, GCL: 389958.2816, Reg: 0.0000
+2024-10-14 18:30: 🎉Best recall@20: 0.03715.Model saved to ta_model_great.pt
+2024-10-14 18:30: 🧑📘Epoch 2/1000 Early stopping 0 - Recall 0.03735, Ndcg: 0.0156 || Avg Loss: 316.3711 | BPR: 0.3044, Pure Ranking KD: 22326.8552, KD Feat: 0.9325, GCL: 315743.9599, Reg: 0.0000
+2024-10-14 18:30: 🎉Best recall@20: 0.03735.Model saved to ta_model_great.pt
+2024-10-14 18:31: 🧑📘Epoch 3/1000 Early stopping 0 - Recall 0.03783, Ndcg: 0.0158 || Avg Loss: 261.2161 | BPR: 0.2673, Pure Ranking KD: 16790.2622, KD Feat: 0.8005, GCL: 260696.0348, Reg: 0.0000
+2024-10-14 18:31: 🎉Best recall@20: 0.03783.Model saved to ta_model_great.pt
+2024-10-14 18:31: 🧑📘Epoch 4/1000 Early stopping 0 - Recall 0.03821, Ndcg: 0.0160 || Avg Loss: 220.6286 | BPR: 0.2360, Pure Ranking KD: 15241.8242, KD Feat: 0.7228, GCL: 220164.1321, Reg: 0.0000
+2024-10-14 18:31: 🎉Best recall@20: 0.03821.Model saved to ta_model_great.pt
+2024-10-14 18:31: 🧑📘Epoch 5/1000 Early stopping 0 - Recall 0.03900, Ndcg: 0.0163 || Avg Loss: 183.9625 | BPR: 0.1980, Pure Ranking KD: 8438.0005, KD Feat: 0.6738, GCL: 183609.7885, Reg: 0.0000
+2024-10-14 18:31: 🎉Best recall@20: 0.03900.Model saved to ta_model_great.pt
+2024-10-14 18:32: 🧑📘Epoch 6/1000 Early stopping 0 - Recall 0.03967, Ndcg: 0.0167 || Avg Loss: 155.5394 | BPR: 0.1757, Pure Ranking KD: 6798.5693, KD Feat: 0.6406, GCL: 155229.4414, Reg: 0.0000
+2024-10-14 18:32: 🎉Best recall@20: 0.03967.Model saved to ta_model_great.pt
+2024-10-14 18:32: 🧑📘Epoch 7/1000 Early stopping 0 - Recall 0.04001, Ndcg: 0.0169 || Avg Loss: 134.2369 | BPR: 0.1587, Pure Ranking KD: 5157.8762, KD Feat: 0.6186, GCL: 133962.9150, Reg: 0.0000
+2024-10-14 18:32: 🎉Best recall@20: 0.04001.Model saved to ta_model_great.pt
+2024-10-14 18:32: 🧑📘Epoch 8/1000 Early stopping 0 - Recall 0.04020, Ndcg: 0.0172 || Avg Loss: 117.3081 | BPR: 0.1443, Pure Ranking KD: 4477.7070, KD Feat: 0.6015, GCL: 117057.3167, Reg: 0.0000
+2024-10-14 18:32: 🎉Best recall@20: 0.04020.Model saved to ta_model_great.pt
+2024-10-14 18:33: 🧑📘Epoch 9/1000 Early stopping 0 - Recall 0.04104, Ndcg: 0.0176 || Avg Loss: 102.4524 | BPR: 0.1290, Pure Ranking KD: 3647.1892, KD Feat: 0.5868, GCL: 102227.0768, Reg: 0.0000
+2024-10-14 18:33: 🎉Best recall@20: 0.04104.Model saved to ta_model_great.pt
+2024-10-14 18:33: 🧑📘Epoch 10/1000 Early stopping 0 - Recall 0.04174, Ndcg: 0.0179 || Avg Loss: 91.1438 | BPR: 0.1154, Pure Ranking KD: 3219.3353, KD Feat: 0.5781, GCL: 90937.3597, Reg: 0.0000
+2024-10-14 18:33: 🎉Best recall@20: 0.04174.Model saved to ta_model_great.pt
+2024-10-14 18:34: 🧑📘Epoch 11/1000 Early stopping 0 - Recall 0.04214, Ndcg: 0.0182 || Avg Loss: 82.1693 | BPR: 0.1078, Pure Ranking KD: 1257.0424, KD Feat: 0.5700, GCL: 81991.1655, Reg: 0.0000
+2024-10-14 18:34: 🎉Best recall@20: 0.04214.Model saved to ta_model_great.pt
+2024-10-14 18:34: 🧑📘Epoch 12/1000 Early stopping 0 - Recall 0.04243, Ndcg: 0.0184 || Avg Loss: 74.8205 | BPR: 0.0980, Pure Ranking KD: 1200.1033, KD Feat: 0.5644, GCL: 74653.3358, Reg: 0.0000
+2024-10-14 18:34: 🎉Best recall@20: 0.04243.Model saved to ta_model_great.pt

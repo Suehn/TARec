@@ -1,0 +1,144 @@
+2024-10-14 15:44: PID: 23937
+
+2024-10-14 15:44: args: 
+name                              : MMTA_KD
+dataset                           : tiktok
+data_path                         : /home/ZIYIAP/Documents/OneDrive_local/distiller/TARec/data
+Ks                                : [10, 20, 40, 50]
+seed                              : 2022
+sparse                            : 1
+test_flag                         : part
+edge_mask                         : 0
+edge_mask_rate                    : 0.1
+batch_size                        : 1024
+epoch                             : 1000
+cf_model                          : light_init
+early_stopping_patience           : 12
+gpu_id                            : 0
+regs                              : [1e-5,1e-5,1e-2]
+emb_reg                           : 1e-07
+teacher_model_type                : gcl
+lr                                : 0.001
+teacher_model_dict_name           : teacher_model_great
+teacher_reg_rate                  : 1
+t_weight_decay                    : 0.001
+t_feat_mf_rate                    : 0.001
+feat_reg_decay                    : 1e-05
+is_softmax                        : True
+is_gcl_softmax                    : False
+teacher_assistant_model_type      : lightgcl
+teacher_assistant_model_dict_name : teacher_assistant_model_great
+student_model_type                : mlpgcl
+student_model_dict_name           : 
+student_embed_size                : 64
+student_lr                        : 0.001
+student_reg_rate                  : 1
+student_drop_rate                 : 0.2
+student_tau                       : 5
+embed_size                        : 64
+drop_rate                         : 0.4
+weight_size                       : [64, 64]
+model_cat_rate                    : 0.028
+layers                            : 1
+n_layers                          : 2
+ta_n_layers                       : 1
+student_n_layers                  : 1
+mlp_n_layers                      : 1
+if_train_teacher                  : True
+is_train_student                  : False
+kd_loss_rate                      : 5e-06
+kd_loss_feat_rate                 : 0.1
+cl_loss_rate                      : 0.002
+svd_gcl_rate                      : 1.0
+x_gcl_rate                        : 1.0
+layer_gcl                         : 1.0
+svd_layer_gcl                     : 0.0
+xsvd_gcl                          : 0.0
+x_layer_gcl                       : 0.0
+ssm_rate                          : 0.6
+s_layer_gcl                       : 0.0025
+t_cl_loss_rate                    : 0.01
+hard_token_type                   : pca
+soft_token_rate                   : 0.1
+feat_soft_token_rate              : 9
+t_prompt_rate1                    : 100.0
+prompt_dropout                    : 0
+alpha_l                           : 2
+feat_loss_type                    : sce
+neg_sample_num                    : 10
+list_wise_loss_rate               : 1
+q                                 : 1
+eps                               : 0.2
+kd_t_decay_threshold              : 0.0
+kd_ta_decay_rate                  : 0.6
+kd_t_decay_rate                   : 0.6
+t_init_method                     : uniform
+norm_mode                         : None
+ta_norm_mode                      : None
+s_norm_mode                       : None
+s_norm_scale                      : 0.05
+ta_norm_scale                     : 0.0
+norm_scale                        : 0.08
+kd_loss_type                      : sinkhorn
+is_teacher_kd                     : False
+init_teacher                      : False
+t_bpr_loss_rate                   : 1.0
+2024-10-14 15:44: 🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸
+2024-10-14 15:44: 🎓📘 Start training teacher model... 🚀✨
+2024-10-14 15:44: Teacher model type: gcl
+2024-10-14 15:44: 🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸
+
+2024-10-14 15:45: 🎉Best recall@20: 0.04486.Model saved to teacher_model_great.pt
+2024-10-14 15:45: 🎓📘Epoch 1/1000 Early stopping 0 - Recall 0.04486, Ndcg: 0.0184 || Avg Loss: 38.9686 | BPR: 0.6666, Prompt: 0.3766, Image: 102.3814, Text: 7.9176, Reg: 0.0000, Feat_Reg: 0.0515, GCL: 0.4800
+2024-10-14 15:45: 🎓📘Epoch 2/1000 Early stopping 1 - Recall 0.03889, Ndcg: 0.0156 || Avg Loss: 27.4899 | BPR: 0.5610, Prompt: 0.2647, Image: 4.7928, Text: 0.5075, Reg: 0.0000, Feat_Reg: 0.0106, GCL: 0.4475
+2024-10-14 15:46: 🎓📘Epoch 3/1000 Early stopping 2 - Recall 0.04278, Ndcg: 0.0166 || Avg Loss: 25.6497 | BPR: 0.4031, Prompt: 0.2478, Image: 3.5259, Text: 0.8718, Reg: 0.0001, Feat_Reg: 0.0093, GCL: 0.4545
+2024-10-14 15:46: 🎉Best recall@20: 0.05083.Model saved to teacher_model_great.pt
+2024-10-14 15:46: 🎓📘Epoch 4/1000 Early stopping 0 - Recall 0.05083, Ndcg: 0.0193 || Avg Loss: 25.1253 | BPR: 0.2917, Prompt: 0.2437, Image: 3.0251, Text: 0.8131, Reg: 0.0001, Feat_Reg: 0.0083, GCL: 0.4490
+2024-10-14 15:46: 🎉Best recall@20: 0.05917.Model saved to teacher_model_great.pt
+2024-10-14 15:46: 🎓📘Epoch 5/1000 Early stopping 0 - Recall 0.05917, Ndcg: 0.0222 || Avg Loss: 24.7983 | BPR: 0.2244, Prompt: 0.2412, Image: 2.6430, Text: 1.0199, Reg: 0.0002, Feat_Reg: 0.0077, GCL: 0.4405
+2024-10-14 15:46: 🎉Best recall@20: 0.06347.Model saved to teacher_model_great.pt
+2024-10-14 15:46: 🎓📘Epoch 6/1000 Early stopping 0 - Recall 0.06347, Ndcg: 0.0238 || Avg Loss: 24.7175 | BPR: 0.1834, Prompt: 0.2409, Image: 2.4150, Text: 0.8283, Reg: 0.0002, Feat_Reg: 0.0071, GCL: 0.4331
+2024-10-14 15:47: 🎉Best recall@20: 0.07014.Model saved to teacher_model_great.pt
+2024-10-14 15:47: 🎓📘Epoch 7/1000 Early stopping 0 - Recall 0.07014, Ndcg: 0.0258 || Avg Loss: 24.9263 | BPR: 0.1537, Prompt: 0.2434, Image: 2.3207, Text: 1.1803, Reg: 0.0002, Feat_Reg: 0.0069, GCL: 0.4267
+2024-10-14 15:47: 🎉Best recall@20: 0.07236.Model saved to teacher_model_great.pt
+2024-10-14 15:47: 🎓📘Epoch 8/1000 Early stopping 0 - Recall 0.07236, Ndcg: 0.0269 || Avg Loss: 24.5162 | BPR: 0.1300, Prompt: 0.2396, Image: 2.1409, Text: 1.0517, Reg: 0.0002, Feat_Reg: 0.0065, GCL: 0.4204
+2024-10-14 15:47: 🎉Best recall@20: 0.07431.Model saved to teacher_model_great.pt
+2024-10-14 15:47: 🎓📘Epoch 9/1000 Early stopping 0 - Recall 0.07431, Ndcg: 0.0276 || Avg Loss: 24.5145 | BPR: 0.1126, Prompt: 0.2398, Image: 2.0222, Text: 0.8056, Reg: 0.0003, Feat_Reg: 0.0060, GCL: 0.4163
+2024-10-14 15:47: 🎉Best recall@20: 0.07569.Model saved to teacher_model_great.pt
+2024-10-14 15:47: 🎓📘Epoch 10/1000 Early stopping 0 - Recall 0.07569, Ndcg: 0.0285 || Avg Loss: 24.5928 | BPR: 0.0992, Prompt: 0.2407, Image: 2.0919, Text: 0.9149, Reg: 0.0003, Feat_Reg: 0.0059, GCL: 0.4117
+2024-10-14 15:48: 🎉Best recall@20: 0.07819.Model saved to teacher_model_great.pt
+2024-10-14 15:48: 🎓📘Epoch 11/1000 Early stopping 0 - Recall 0.07819, Ndcg: 0.0292 || Avg Loss: 24.2692 | BPR: 0.0874, Prompt: 0.2376, Image: 2.2826, Text: 0.9244, Reg: 0.0003, Feat_Reg: 0.0059, GCL: 0.4083
+2024-10-14 15:48: 🎉Best recall@20: 0.07972.Model saved to teacher_model_great.pt
+2024-10-14 15:48: 🎓📘Epoch 12/1000 Early stopping 0 - Recall 0.07972, Ndcg: 0.0297 || Avg Loss: 24.3840 | BPR: 0.0777, Prompt: 0.2389, Image: 1.8451, Text: 0.7781, Reg: 0.0003, Feat_Reg: 0.0053, GCL: 0.4054
+2024-10-14 15:48: 🎉Best recall@20: 0.08056.Model saved to teacher_model_great.pt
+2024-10-14 15:48: 🎓📘Epoch 13/1000 Early stopping 0 - Recall 0.08056, Ndcg: 0.0301 || Avg Loss: 24.4684 | BPR: 0.0687, Prompt: 0.2399, Image: 2.0426, Text: 0.7141, Reg: 0.0004, Feat_Reg: 0.0051, GCL: 0.4021
+2024-10-14 15:48: 🎉Best recall@20: 0.08069.Model saved to teacher_model_great.pt
+2024-10-14 15:48: 🎓📘Epoch 14/1000 Early stopping 0 - Recall 0.08069, Ndcg: 0.0303 || Avg Loss: 24.4971 | BPR: 0.0628, Prompt: 0.2403, Image: 1.8596, Text: 0.7331, Reg: 0.0004, Feat_Reg: 0.0049, GCL: 0.3997
+2024-10-14 15:49: 🎉Best recall@20: 0.08181.Model saved to teacher_model_great.pt
+2024-10-14 15:49: 🎓📘Epoch 15/1000 Early stopping 0 - Recall 0.08181, Ndcg: 0.0310 || Avg Loss: 24.3979 | BPR: 0.0559, Prompt: 0.2394, Image: 1.7533, Text: 0.5763, Reg: 0.0004, Feat_Reg: 0.0046, GCL: 0.3977
+2024-10-14 15:49: 🎉Best recall@20: 0.08486.Model saved to teacher_model_great.pt
+2024-10-14 15:49: 🎓📘Epoch 16/1000 Early stopping 0 - Recall 0.08486, Ndcg: 0.0322 || Avg Loss: 24.5969 | BPR: 0.0499, Prompt: 0.2414, Image: 1.9592, Text: 0.5965, Reg: 0.0004, Feat_Reg: 0.0047, GCL: 0.3947
+2024-10-14 15:49: 🎉Best recall@20: 0.08611.Model saved to teacher_model_great.pt
+2024-10-14 15:49: 🎓📘Epoch 17/1000 Early stopping 0 - Recall 0.08611, Ndcg: 0.0324 || Avg Loss: 24.3767 | BPR: 0.0458, Prompt: 0.2393, Image: 1.6520, Text: 0.4485, Reg: 0.0004, Feat_Reg: 0.0043, GCL: 0.3936
+2024-10-14 15:49: 🎉Best recall@20: 0.08639.Model saved to teacher_model_great.pt
+2024-10-14 15:49: 🎓📘Epoch 18/1000 Early stopping 0 - Recall 0.08639, Ndcg: 0.0327 || Avg Loss: 24.3970 | BPR: 0.0413, Prompt: 0.2396, Image: 1.6494, Text: 0.4884, Reg: 0.0004, Feat_Reg: 0.0042, GCL: 0.3917
+2024-10-14 15:49: 🎓📘Epoch 19/1000 Early stopping 1 - Recall 0.08556, Ndcg: 0.0326 || Avg Loss: 24.5228 | BPR: 0.0375, Prompt: 0.2409, Image: 1.5603, Text: 0.4773, Reg: 0.0005, Feat_Reg: 0.0040, GCL: 0.3905
+2024-10-14 15:50: 🎓📘Epoch 20/1000 Early stopping 2 - Recall 0.08639, Ndcg: 0.0330 || Avg Loss: 24.3804 | BPR: 0.0347, Prompt: 0.2395, Image: 1.5716, Text: 0.4980, Reg: 0.0005, Feat_Reg: 0.0039, GCL: 0.3896
+2024-10-14 15:50: 🎉Best recall@20: 0.08806.Model saved to teacher_model_great.pt
+2024-10-14 15:50: 🎓📘Epoch 21/1000 Early stopping 0 - Recall 0.08806, Ndcg: 0.0333 || Avg Loss: 24.3820 | BPR: 0.0314, Prompt: 0.2396, Image: 1.3761, Text: 0.4135, Reg: 0.0005, Feat_Reg: 0.0036, GCL: 0.3882
+2024-10-14 15:50: 🎓📘Epoch 22/1000 Early stopping 1 - Recall 0.08708, Ndcg: 0.0330 || Avg Loss: 24.5102 | BPR: 0.0294, Prompt: 0.2409, Image: 1.3392, Text: 0.4297, Reg: 0.0005, Feat_Reg: 0.0035, GCL: 0.3869
+2024-10-14 15:50: 🎓📘Epoch 23/1000 Early stopping 2 - Recall 0.08625, Ndcg: 0.0328 || Avg Loss: 24.4394 | BPR: 0.0273, Prompt: 0.2402, Image: 1.3508, Text: 0.4219, Reg: 0.0005, Feat_Reg: 0.0034, GCL: 0.3859
+2024-10-14 15:51: 🎓📘Epoch 24/1000 Early stopping 3 - Recall 0.08722, Ndcg: 0.0332 || Avg Loss: 24.3044 | BPR: 0.0254, Prompt: 0.2389, Image: 1.2247, Text: 0.4704, Reg: 0.0005, Feat_Reg: 0.0033, GCL: 0.3852
+2024-10-14 15:51: 🎓📘Epoch 25/1000 Early stopping 4 - Recall 0.08653, Ndcg: 0.0328 || Avg Loss: 24.6361 | BPR: 0.0237, Prompt: 0.2422, Image: 1.3429, Text: 0.5089, Reg: 0.0005, Feat_Reg: 0.0033, GCL: 0.3836
+2024-10-14 15:51: 🎓📘Epoch 26/1000 Early stopping 5 - Recall 0.08694, Ndcg: 0.0326 || Avg Loss: 24.1681 | BPR: 0.0225, Prompt: 0.2376, Image: 1.0931, Text: 0.4839, Reg: 0.0006, Feat_Reg: 0.0030, GCL: 0.3839
+2024-10-14 15:51: 🎓📘Epoch 27/1000 Early stopping 6 - Recall 0.08542, Ndcg: 0.0324 || Avg Loss: 24.3833 | BPR: 0.0207, Prompt: 0.2398, Image: 1.1984, Text: 0.4877, Reg: 0.0006, Feat_Reg: 0.0029, GCL: 0.3824
+2024-10-14 15:51: 🎓📘Epoch 28/1000 Early stopping 7 - Recall 0.08667, Ndcg: 0.0326 || Avg Loss: 24.5330 | BPR: 0.0201, Prompt: 0.2413, Image: 1.1589, Text: 0.5930, Reg: 0.0006, Feat_Reg: 0.0029, GCL: 0.3822
+2024-10-14 15:52: 🎓📘Epoch 29/1000 Early stopping 8 - Recall 0.08653, Ndcg: 0.0327 || Avg Loss: 24.4881 | BPR: 0.0181, Prompt: 0.2408, Image: 1.0840, Text: 0.5535, Reg: 0.0006, Feat_Reg: 0.0027, GCL: 0.3811
+2024-10-14 15:52: 🎓📘Epoch 30/1000 Early stopping 9 - Recall 0.08597, Ndcg: 0.0326 || Avg Loss: 24.3219 | BPR: 0.0174, Prompt: 0.2392, Image: 1.0628, Text: 0.4919, Reg: 0.0006, Feat_Reg: 0.0027, GCL: 0.3812
+2024-10-14 15:52: 🎓📘Epoch 31/1000 Early stopping 10 - Recall 0.08431, Ndcg: 0.0320 || Avg Loss: 24.4314 | BPR: 0.0170, Prompt: 0.2403, Image: 0.9409, Text: 0.4731, Reg: 0.0006, Feat_Reg: 0.0025, GCL: 0.3800
+2024-10-14 15:52: 🎓📘Epoch 32/1000 Early stopping 11 - Recall 0.08306, Ndcg: 0.0317 || Avg Loss: 24.4383 | BPR: 0.0159, Prompt: 0.2404, Image: 0.9982, Text: 0.4559, Reg: 0.0006, Feat_Reg: 0.0024, GCL: 0.3794
+2024-10-14 15:52: early stopping at epoch 33
+2024-10-14 15:52: 🏆🎉Final model saved to /home/ZIYIAP/Documents/OneDrive_local/distiller/TARec/Model/teacher/tiktok/teacher_model_final.pt, best epoch: 21, best recall@20: 0.08806
+2024-10-14 15:52: ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+2024-10-14 15:52: ✅🎓📘 Finished training teacher model... 🏆🎉
+2024-10-14 15:52: ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
