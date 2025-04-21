@@ -32,9 +32,3 @@ If you find Guider useful in your research, please consider citing our [paper](h
 }
 ```
 This code is made available solely for academic research purposes.
-
-
-## Acknowledgement
-The structure of this code is inspired by the [MMRec](https://github.com/enoche/MMRec) framework. We acknowledge and appreciate their valuable contributions.
-
-
